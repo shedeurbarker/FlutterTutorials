@@ -1,2 +1,0 @@
-# FlutterTutorials
- My flutter journey
