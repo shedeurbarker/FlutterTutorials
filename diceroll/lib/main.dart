@@ -6,7 +6,9 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: const Text('Dice Roller')),
+        appBar: AppBar(
+            title: const Text('Dice Roller'),
+            backgroundColor: const Color.fromARGB(255, 17, 85, 7)),
         body: const DiceRoller(),
       ),
     ),

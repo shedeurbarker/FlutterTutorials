@@ -65,6 +65,10 @@ class _QuizState extends State<Quiz> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Quiz App'),
+          backgroundColor: const Color.fromARGB(255, 45, 4, 76),
+        ),
         body: Container(
           alignment: Alignment.center,
           decoration: const BoxDecoration(
