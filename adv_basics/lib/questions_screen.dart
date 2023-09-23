@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key, required this.onSelectAnswer});
+  const QuestionsScreen({
+    super.key,
+    required this.onSelectAnswer,
+    required this.quit,
+  });
 
   final void Function(String answer) onSelectAnswer;
+  final void Function() quit;
 
   @override
   State<QuestionsScreen> createState() {
@@ -59,7 +64,20 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   const SizedBox(height: 20)
                 ],
               );
-            })
+            }),
+            const SizedBox(
+              height: 30,
+            ),
+            TextButton.icon(
+              onPressed: widget.quit,
+              icon: const Icon(Icons.logout, color: Colors.white),
+              label: const Text(
+                'Quit',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            )
           ],
         ),
       ),
